@@ -12,3 +12,6 @@ body{
     background-color: rgb(75, 185, 185);
     text-align: center;
 }
+button{
+    margin-bottom:50px;
+}
