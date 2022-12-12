@@ -4,8 +4,8 @@ function makeSquare(parent){
     //div.addEventListener('mouseleave', () => div.style.backgroundColor = "white")
 
     
-    div.setAttribute('style',  `height:         ${960/squares}px;
-                                width:          ${960/squares}px;
+    div.setAttribute('style',  `height:         ${900/squares}px;
+                                width:          ${900/squares}px;
                                 display:        inline-block;
                                 background-color: white`)
     parent.appendChild(div)
@@ -47,8 +47,9 @@ const button1 = document.querySelector("#button");
 const button2 = document.querySelector("#delete");
 
 button1.addEventListener('click', () => makeGrid("yes"))
-button2.addEventListener('click', () => makeGrid("no"))
+button2.addEventListener('click', () => makeGrid())
 
-let squares = 0;
+let squares = 2;
+makeGrid()
 
 
