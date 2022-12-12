@@ -1,5 +1,8 @@
 function makeSquare(parent){
     let div = document.createElement("div");
+    div.addEventListener('mouseenter', () => div.style.backgroundColor = "black")
+    div.addEventListener('mouseleave', () => div.style.backgroundColor = "grey")
+
     div.setAttribute('style', 'height:20px; width:20px; border-style:solid;  border-width: 2px; display:inline-block;')
     parent.appendChild(div)
 }
@@ -31,5 +34,6 @@ const button = document.querySelector("#button")
 button.addEventListener('click', () => makeGrid())
 
 
-let squares = 0;
-squares = prompt("enter Rows length");
+let squares = 16;
+//squares = prompt("enter Rows length");
+
