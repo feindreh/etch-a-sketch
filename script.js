@@ -1,9 +1,13 @@
 function makeSquare(parent){
     let div = document.createElement("div");
     div.addEventListener('mouseenter', () => div.style.backgroundColor = "black")
-    div.addEventListener('mouseleave', () => div.style.backgroundColor = "grey")
+    //div.addEventListener('mouseleave', () => div.style.backgroundColor = "white")
 
-    div.setAttribute('style', 'height:20px; width:20px; border-style:solid;  border-width: 2px; display:inline-block;')
+    
+    div.setAttribute('style',  `height:         ${960/squares}px;
+                                width:          ${960/squares}px;
+                                display:        inline-block;
+                                background-color: white`)
     parent.appendChild(div)
 }
 
@@ -22,9 +26,15 @@ function makeRow(){
 }
 
 function makeGrid(){
+    squares = prompt("enter Rows length");
+    deleteGrid();
     for(let i = 0; i < squares; i++){
         makeRow()
     }
+}
+
+function deleteGrid(){
+    container.textContent = ""
 }
 
 
@@ -33,7 +43,6 @@ const button = document.querySelector("#button")
 
 button.addEventListener('click', () => makeGrid())
 
+let squares = 0;
 
-let squares = 16;
-//squares = prompt("enter Rows length");
 

@@ -3,3 +3,12 @@ div{
     padding:0px;
     line-height: 0;
 }
+
+#container{
+    border:solid black 5px;
+    display:contents
+}
+body{
+    background-color: rgb(75, 185, 185);
+    text-align: center;
+}
